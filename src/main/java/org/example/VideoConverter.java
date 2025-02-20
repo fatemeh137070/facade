@@ -10,6 +10,7 @@ class VideoConverter {
         } else {
             destinationCodec = "Ogg";
         }
+
         String buffer = BitrateReader.read(filename, sourceCodec);
         String result = BitrateReader.convert(buffer, destinationCodec);
         result = new AudioMixer().fix(result);
